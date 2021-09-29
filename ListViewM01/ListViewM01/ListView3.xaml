@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ListViewM01.ListView3"
+             BackgroundColor="#262626"
+             Title="ListView3">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Blue" Padding="15"
+                   CornerRadius="0">
+                <Label Text="Exemplo de lista fixa!"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" FontSize="24"
+                       />
+            </Frame>
+            <ListView x:Name="listview1"
+                      SeparatorColor="White"
+                      SeparatorVisibility="Default"
+                      ItemSelected="listView1_Itemselected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="{Binding img}"
+                                   Text="{Binding nome}"
+                                   Detail="{Binding valor}"
+                                   TextColor="White"
+                                   DetailColor="Gold"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>                
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
